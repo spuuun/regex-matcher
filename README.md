@@ -1,16 +1,16 @@
 # Census Live Coding Question
 
 Using the language of your choice and its standard library, build a regular expression matcher that supports these two rules and two qualifiers:
-* _Rule 1:_ Match a literal character:
+* **Rule 1:** Match a literal character:
     * `match(pattern: "ab", string: "123") ⇒ false`
     * `match(pattern: "ab", string: "ab") ⇒ true`
-* _Rule 2:_ Match any character using .
+* **Rule 2:** Match any character using .
     * `match(pattern: "a.", string: "a") ⇒ false`
     * `match(pattern: ".a", string: "aa") ⇒ true`
-* _Qualifier 1:_ Make the previous rule optional using ?, meaning match the previous rule 0 or 1 times
+* **Qualifier 1:** Make the previous rule optional using ?, meaning match the previous rule 0 or 1 times
     * `match(pattern: "aa?", string: "a") ⇒ true`
     * `match(pattern: "aa?", string: "aa") ⇒ true`
-* _Qualifier 2:_ Repeated qualifier *, meaning match the previous rule 0 or more times
+* **Qualifier 2:** Repeated qualifier *, meaning match the previous rule 0 or more times
     * `match(pattern: "ba*", string: "b") ⇒ true`
     * `match(pattern: "ba*b", string: "baaaaab") ⇒ true`
     * `match(pattern: "a*a", string: "aaaa") ⇒ true`
@@ -19,11 +19,11 @@ Using the language of your choice and its standard library, build a regular expr
     * `match(pattern: "a.?b*cc.*", string: "axbbbbcc1234") ⇒ true`
 
 The output should be a function that accepts a pattern and a candidate string
-and returns _true_ or _false_ if the entire candidate string matches the pattern (i.e. assume that the regex starts with a `^` and ends with a `$`)
+and returns **true** or **false** if the entire candidate string matches the pattern (i.e. assume that the regex starts with a `^` and ends with a `$`)
 
 You may use websites, books, and documentation as a reference for your language and its standard libraries, but please do not use code, documentation, or algorithms from other regular expression libraries as a reference or use those libraries directly - the algorithms, data structures, and implementation must be your own.
 
-_Out of scope:_
+**Out of scope:**
 * Other regex constructions such as (but not limited to):
     * Groups (`(ab)`)
     * Sets (`[ab]`)
