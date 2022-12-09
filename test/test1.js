@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import matcher from '../solution/matcher.js'
 
 describe('Simple test suite:', function () {
-    it('ab/123 should be false', function () {
+    it('ab/123 to be false', function () {
         expect(matcher("123", "ab")).to.be.false
     });
 

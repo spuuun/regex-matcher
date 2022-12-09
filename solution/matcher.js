@@ -26,7 +26,6 @@ const matcher = function (candidateString, pattern) {
     let cs = 0
     const statements = parsePattern(pattern)
 
-    console.log('STATEMENTS: ', statements)
     while (candidateString[cs] && statements[sta]) {
         let statement = statements[sta]
         let candidate = candidateString[cs]
@@ -49,7 +48,6 @@ const matcher = function (candidateString, pattern) {
                     cs++
                 }
                 else {
-                    sta++
                     cs++
                 }
             }
