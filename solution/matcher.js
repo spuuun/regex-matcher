@@ -18,43 +18,46 @@ const parsePattern = pattern => {
             count++
         }
     }
-
     return statements
 }
 
 const matcher = function (candidateString, pattern) {
-    let p = 0
+    let sta = 0
     let cs = 0
     const statements = parsePattern(pattern)
 
-    while (candidateString[cs] && statements[p]) {
-        let statement = statements[p]
+    console.log('STATEMENTS: ', statements)
+    while (candidateString[cs] && statements[sta]) {
+        let statement = statements[sta]
         let candidate = candidateString[cs]
 
         if (statement.length > 1) {
             //?
             if (statement[1] === '?') {
                 if (statement[0] === candidate) {
-                    p++
+                    sta++
                     cs++
                 }
                 else {
-                    p++
+                    sta++
                 }
             }
+            
             //*
             if (statement[1] === '*') {
                 if (statement[0] === candidate) {
                     cs++
                 }
                 else {
-                    p++
+                    sta++
+                    cs++
                 }
             }
         }
+
         else {
-            if (statement === candidate || statement === '.') {
-                p++
+            if ((statement === candidate ) || (statement === '.' && candidate)) {
+                sta++
                 cs++
             }
             else {
@@ -63,7 +66,13 @@ const matcher = function (candidateString, pattern) {
         }
     }
 
-    return true;
+if (statements[sta] && !candidateString[cs]) {
+    if (statements[sta].length === 1) {
+        return false
+    }
+}
+return true;
+
 }
 
 export default matcher;
