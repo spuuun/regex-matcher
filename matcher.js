@@ -53,3 +53,5 @@ const matcher = function(candidateString, pattern) {
     // if rule before and after ? or * is the same --- e.g. a*a, b?b, .*.
 
 }
+
+export default { matcher }
