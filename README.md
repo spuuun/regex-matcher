@@ -1,11 +1,12 @@
-# Using `tester.js`
-* Run tester.js from the command line, using `node PATTERN [EXPECTED-MATCH-COUNT]`
-    * where `PATTERN` is the pattern you want to search for and `EXPECTED-MATCH-COUNT` is the number of matches you expect to result when running the pattern against the dataset
-    * **note:** `EXPECTED-MATCH-COUNT` is optional. if no expected count is provided, only the number of matches will be displayed with the results
+# Tests
+## **recommended:** Simply run `npm test` 
 
+## Using `diyTestRunner.js`
+* Run diyTestRunner.js from the command line, using `node PATTERN`
+    * where `PATTERN` is the pattern you want to search for in a static dataset supplied in the current `data.js` file
+    * it is good practice, though not necessary in every case, to enclose `PATTERN` in quotation marks
     * may add the ability to specify different dataset(s) with command line arguments in future versions
 
-------------------------------------------------------------------------------------------------------------------
 
 # Census Live Coding Question 
 [original](https://getcensus.notion.site/Census-Live-Coding-Question-e6e77047424949598d51f7fd39d423fd)
