@@ -1,5 +1,5 @@
 # Tests
-## **recommended** 
+## **Recommended** 
 * Simply run `npm test` 
 
 ## Using `diyTestRunner.js`
