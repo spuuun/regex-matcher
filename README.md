@@ -1,5 +1,6 @@
 # Tests
-## **recommended:** Simply run `npm test` 
+## **recommended** 
+* Simply run `npm test` 
 
 ## Using `diyTestRunner.js`
 * Run diyTestRunner.js from the command line, using `node PATTERN`
