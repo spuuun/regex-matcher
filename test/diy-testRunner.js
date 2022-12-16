@@ -1,5 +1,5 @@
 import cases from './data.js'
-import  matcher from './matcher.js'
+import matcher from '../solution/matcher.js'
 
 const pattern = process.argv[2]
 const expectedMatches = process.argv[3]
