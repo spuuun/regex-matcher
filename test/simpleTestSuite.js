@@ -2,8 +2,7 @@ import { describe, it } from 'mocha'
 import { expect } from 'chai';
 import matcher from '../solution/matcher.js'
 
-// args for `matcher` function should be supplied here in order:
-    // candidateString, pattern
+// args for `matcher` function should be supplied here in the following order: candidateString, pattern
 describe('Simple test suite:', function () {
     it('ab/123 to be false', function () {
         expect(matcher("123", "ab")).to.be.false
