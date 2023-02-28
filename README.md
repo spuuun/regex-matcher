@@ -1,6 +1,6 @@
 # Tests
 ## **Recommended** 
-* Simply run `npm test` 
+* Simply run `npm test` from the project's root directory 
 
 ## Using `diyTestRunner.js`
 * Run diyTestRunner.js from the command line, using `node PATTERN`
